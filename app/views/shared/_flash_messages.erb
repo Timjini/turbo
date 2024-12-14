@@ -1,0 +1,13 @@
+<% if flash[:notice] %>
+  <div
+    data-controller="alert"
+    data-alert-message-value="<%= flash[:notice] %>"
+    data-alert-type-value="success"
+  ></div>
+<% elsif flash[:alert] %>
+  <div
+    data-controller="alert"
+    data-alert-message-value="<%= flash[:alert] %>"
+    data-alert-type-value="error"
+  ></div>
+<% end %>
