@@ -1,10 +1,14 @@
 <!-- Frame for the form -->
-<div class="flex flex-col items-center flex-wrap justify-center">
+<div class="flex flex-row items-center flex-wrap justify-right">
+<div class="one">
 <%= turbo_frame_tag "post_form" do %>
   <%= render "form", post: Post.new %>
 <% end %>
+</div>
 
-<%= turbo_frame_tag "posts" do %>
+<div class="two">
+<%= turbo_frame_tag "posts", class:"flex flex-col" do %>
   <%= render @posts %>
 <% end %>
+</div>
 </div>
